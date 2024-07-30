@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: hubspot
+    description: This is a replica of the Postgres database used by our app
+    database: revops
+    schema: public
+    tables:
+      - name: COMPANIES
+        description: company
+        freshness:
+          warn_after: { count: 10, period: hour }
+          error_after: { count: 24, period: hour }
+      - name: HUBSPOT_OWNER_HS_OWNER
+      - name: CONTACTS
+        description: hubspot_direct_contacts
+      - name: DEALS
+        description: hubspot_direct_deals
+      - name: HEVOSECURITYUSERS_11_J7_DBT_HEVO_SECURITY_USERS
+        
+      - name: DEALS_PIPELINE_STAGES
+      - name: DEAL_CONTACT_ASSOCIATION

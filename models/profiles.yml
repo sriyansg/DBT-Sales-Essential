@@ -1,0 +1,14 @@
+Hevo Data:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: https://ejb87516.us-east-1.snowflakecomputing.com
+      user: Sherly
+      password: "{{ env_var('SnowflakeHevo@123') }}"
+      role: HEVO
+      database: marketing
+      warehouse: Snowflakehevo
+      schema: public
+      threads: 4
+      client_session_keep_alive: False
